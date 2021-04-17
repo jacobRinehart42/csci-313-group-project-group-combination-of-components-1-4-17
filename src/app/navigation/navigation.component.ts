@@ -9,7 +9,7 @@ import { AccountService } from "../account.service";
 })
 export class NavigationComponent implements OnInit {
   constructor(
-    private acctService: AccountService,
+    public acctService: AccountService,
     public routService: RoutingService
   ) {}
 
@@ -24,11 +24,16 @@ export class NavigationComponent implements OnInit {
   }
 
   onSignout() {
-    localStorage.removeItem("token");
+    this.acctService.onSignOut();
+    alert("You have successfully signed out!");
   }
 
-  onShowHomepage(){
+  onShowHomepage() {
     this.routService.onShowHomePage();
+  }
+
+  onCreateAccount() {
+    this.routService.onShowCreateAccount();
   }
 
   onGoToAccount() {

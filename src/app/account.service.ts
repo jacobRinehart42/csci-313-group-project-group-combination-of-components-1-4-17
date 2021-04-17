@@ -55,6 +55,18 @@ export class AccountService {
     }
   ];
 
+  onSignOut() {
+    this.signedInUser = {
+      id: 0,
+      username: "null",
+      password: "null",
+      publicName: "null",
+      email: "null",
+      phoneNumber: "null",
+      aboutYou: "null"
+    };
+  }
+
   addAccount(
     username: string,
     password: string,
@@ -63,22 +75,28 @@ export class AccountService {
     phoneNumber: string,
     aboutYou: string
   ) {
-    if (username.trim() != "" && password.trim() != "" && publicName.trim() != "" && email.trim() != "" && phoneNumber.trim() != "" && aboutYou != "") {
+    if (
+      username.trim() != "" &&
+      password.trim() != "" &&
+      publicName.trim() != "" &&
+      email.trim() != "" &&
+      phoneNumber.trim() != "" &&
+      aboutYou != ""
+    ) {
       if (this.uniqueUsernameChecker(username)) {
-      this.accounts.push({
-        id: this.uniqueIdGenerator(),
-        username: username,
-        password: this.passwordHasher(password),
-        publicName: publicName,
-        email: email,
-        phoneNumber: phoneNumber,
-        aboutYou: aboutYou
-      });
-      this.login(username, password);
-      this.routService.onShowHomePage();
-      return true;
-    }
-
+        this.accounts.push({
+          id: this.uniqueIdGenerator(),
+          username: username,
+          password: this.passwordHasher(password),
+          publicName: publicName,
+          email: email,
+          phoneNumber: phoneNumber,
+          aboutYou: aboutYou
+        });
+        this.login(username, password);
+        this.routService.onShowHomePage();
+        return true;
+      }
     }
     return false;
   }

@@ -32,14 +32,14 @@
         <li><a class="nav-link4" (click)="onGoToAccount()">Account</a></li>
         <ul></ul>
       </div>
-      <li *ngIf="!loggedIn()">
-        <a class="nav-link1">Register</a>
+      <li *ngIf="this.acctService.signedInUser.id == 0">
+        <a class="nav-link1" (click)="onCreateAccount()">Register</a>
       </li>
 
-      <li *ngIf="!loggedIn()">
+      <li *ngIf="this.acctService.signedInUser.id == 0">
         <a class="nav-link2" (click)="navToLoginPage()">Login</a>
       </li>
-      <li *ngIf="loggedIn()">
+      <li *ngIf="this.acctService.signedInUser.id != 0">
         <a class="nav-link3" (click)="onSignout()">Sign out</a>
       </li>
     </ul>
