@@ -27,6 +27,7 @@ export class RoutingService {
     this.showCreateItem = false;
     this.showPassword = false;
     this.showMyItems = false;
+    this.showHomepage = false;
   }
 
   onLogin() {
@@ -40,6 +41,7 @@ export class RoutingService {
     this.showCreateItem = false;
     this.showPassword = false;
     this.showMyItems = false;
+    this.showHomepage = false;
   }
 
   onShowCreateAccount() {
@@ -53,6 +55,7 @@ export class RoutingService {
     this.showCreateItem = false;
     this.showPassword = false;
     this.showMyItems = false;
+    this.showHomepage = false;
   }
 
   onShowSignedInUser() {
@@ -66,6 +69,7 @@ export class RoutingService {
     this.showCreateItem = false;
     this.showPassword = false;
     this.showMyItems = false;
+    this.showHomepage = false;
   }
 
   onShowCreateItem() {
@@ -79,6 +83,7 @@ export class RoutingService {
     this.showCreateItem = true;
     this.showPassword = false;
     this.showMyItems = false;
+    this.showHomepage = false;
   }
 
   onShowMyItems() {
@@ -92,6 +97,7 @@ export class RoutingService {
     this.showCreateItem = false;
     this.showPassword = false;
     this.showMyItems = true;
+    this.showHomepage = false;
   }
 
   onShowPassword() {
@@ -105,6 +111,7 @@ export class RoutingService {
     this.showCreateItem = false;
     this.showPassword = true;
     this.showMyItems = false;
+    this.showHomepage = false;
   }
 
   onShowEditItem() {
@@ -118,6 +125,7 @@ export class RoutingService {
     this.showCreateItem = false;
     this.showPassword = false;
     this.showMyItems = false;
+    this.showHomepage = false;
   }
 
   onShowItems() {
@@ -131,6 +139,21 @@ export class RoutingService {
     this.showCreateItem = false;
     this.showPassword = false;
     this.showMyItems = false;
+    this.showHomepage = false;
+  }
+
+  onShowHomePage() {
+    this.showLogin = false;
+    this.showCreateAccount = false;
+    this.showDashboard = true;
+    this.showSignOut = false;
+    this.showItems = false;
+    this.showEditItem = false;
+    this.showSignedInUserInfo = false;
+    this.showCreateItem = false;
+    this.showPassword = false;
+    this.showMyItems = false;
+    this.showHomepage = true;
   }
 
   constructor() {}

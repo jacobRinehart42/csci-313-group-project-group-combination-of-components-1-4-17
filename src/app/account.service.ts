@@ -75,7 +75,7 @@ export class AccountService {
         aboutYou: aboutYou
       });
       this.login(username, password);
-      this.routService.onShowSignedInUser();
+      this.routService.onShowHomePage();
       return true;
     }
 
