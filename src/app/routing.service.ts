@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 export class RoutingService {
-  showLogin: boolean = true;
+  showLogin: boolean = false;
   showCreateAccount: boolean = false;
   showDashboard: boolean = true;
   showSignOut: boolean = false;
@@ -12,7 +12,7 @@ export class RoutingService {
   showSignedInUserInfo: boolean = false;
   showCreateItem: boolean = false;
   showItem: boolean = false;
-  showHomepage: boolean = false;
+  showHomepage: boolean = true;
   //not mandatory but why not
   showPassword: boolean = false;
 
@@ -35,13 +35,13 @@ export class RoutingService {
     this.showCreateAccount = false;
     this.showDashboard = true;
     this.showSignOut = true;
-    this.showItems = true;
+    this.showItems = false;
     this.showEditItem = false;
     this.showSignedInUserInfo = false;
     this.showCreateItem = false;
     this.showPassword = false;
     this.showMyItems = false;
-    this.showHomepage = false;
+    this.showHomepage = true;
   }
 
   onShowCreateAccount() {

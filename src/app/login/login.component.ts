@@ -11,13 +11,11 @@ export class LoginComponent implements OnInit {
   incorrect: boolean = false;
 
   attemptLogin(user: string, password: string) {
-
-    if(this.acctService.login(user, password) == false){
+    if (this.acctService.login(user, password) == false) {
       this.incorrect = true;
-    }
-    else if (this.acctService.login(user, password) == true){
+    } else if (this.acctService.login(user, password) == true) {
       this.incorrect = false;
-      this.routService.onShowSignedInUser();
+      //this.routService.onShowSignedInUser();
       //this.routService.onShowItems();
     }
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { RoutingService } from "../routing.service";
+import { AccountService } from "../account.service";
 
 @Component({
   selector: "app-navigation",
@@ -7,7 +8,10 @@ import { RoutingService } from "../routing.service";
   styleUrls: ["./navigation.component.css"]
 })
 export class NavigationComponent implements OnInit {
-  constructor(public routService: RoutingService) {}
+  constructor(
+    private acctService: AccountService,
+    public routService: RoutingService
+  ) {}
 
   ngOnInit() {}
 
@@ -21,6 +25,18 @@ export class NavigationComponent implements OnInit {
 
   onSignout() {
     localStorage.removeItem("token");
+  }
+
+  onShowHomepage(){
+    this.routService.onShowHomePage();
+  }
+
+  onGoToAccount() {
+    if (this.acctService.signedInUser.username != "null") {
+      this.routService.onShowSignedInUser();
+    } else {
+      this.routService.onShowLogin();
+    }
   }
 }
 
