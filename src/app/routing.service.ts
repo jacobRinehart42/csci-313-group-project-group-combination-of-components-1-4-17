@@ -12,6 +12,7 @@ export class RoutingService {
   showSignedInUserInfo: boolean = false;
   showCreateItem: boolean = false;
   showItem: boolean = false;
+  showHomepage: boolean = false;
   //not mandatory but why not
   showPassword: boolean = false;
 

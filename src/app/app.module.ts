@@ -17,10 +17,11 @@ import { EditItemComponent } from './edit-item/edit-item.component';
 import { ItemsComponent } from './items/items.component';
 import { ItemComponent } from './item/item.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, CreateAccountComponent, LoginComponent, SignedInUserInfoComponent, CreateItemComponent, PasswordComponent, MyItemsComponent, EditItemComponent, ItemsComponent, ItemComponent, NavigationComponent ],
+  declarations: [ AppComponent, HelloComponent, CreateAccountComponent, LoginComponent, SignedInUserInfoComponent, CreateItemComponent, PasswordComponent, MyItemsComponent, EditItemComponent, ItemsComponent, ItemComponent, NavigationComponent, HomepageComponent ],
   bootstrap:    [ AppComponent ],
   providers: [AccountService, RoutingService, ItemsService]
 })
