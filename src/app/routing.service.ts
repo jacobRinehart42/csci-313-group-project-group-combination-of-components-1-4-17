@@ -16,6 +16,19 @@ export class RoutingService {
   //not mandatory but why not
   showPassword: boolean = false;
 
+  onShowLogin() {
+    this.showLogin = true;
+    this.showCreateAccount = false;
+    this.showDashboard = true;
+    this.showSignOut = false;
+    this.showItems = false;
+    this.showEditItem = false;
+    this.showSignedInUserInfo = false;
+    this.showCreateItem = false;
+    this.showPassword = false;
+    this.showMyItems = false;
+  }
+
   onLogin() {
     this.showLogin = false;
     this.showCreateAccount = false;

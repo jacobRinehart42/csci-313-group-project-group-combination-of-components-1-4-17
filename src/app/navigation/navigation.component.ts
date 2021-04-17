@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { RoutingService } from "../routing.service";
 
 @Component({
   selector: "app-navigation",
@@ -6,13 +7,18 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./navigation.component.css"]
 })
 export class NavigationComponent implements OnInit {
-  constructor() {}
+  constructor(public routService: RoutingService) {}
 
   ngOnInit() {}
 
   loggedIn() {
     return localStorage.getItem("token");
   }
+
+  navToLoginPage() {
+    this.routService.onShowLogin();
+  }
+
   onSignout() {
     localStorage.removeItem("token");
   }
