@@ -65,6 +65,7 @@ export class AccountService {
       phoneNumber: "null",
       aboutYou: "null"
     };
+    this.routService.onShowHomePage();
   }
 
   addAccount(
