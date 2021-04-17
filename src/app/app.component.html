@@ -3,6 +3,8 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
+<app-navigation *ngIf="this.routService.showDashboard"></app-navigation>
+
 <app-login *ngIf="this.routService.showLogin"></app-login>
 
 <app-create-account *ngIf="this.routService.showCreateAccount"></app-create-account>
